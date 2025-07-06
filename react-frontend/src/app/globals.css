@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+:root {
+  --scale: 1;
+  --primary-color: #3e1f0f; /* Deep wood tone */
+  --secondary-color: #a37b43; /* Brass/aged gold */
+  --accent-color: #1a0d07; /* Dark leather */
+  --black-color: rgba(0, 0, 0, 0.75);
+  --font-family: 'Bangers', cursive;
+  --button-radius: calc(16px * var(--scale));
+  --button-shadow: 0 calc(6px * var(--scale)) calc(12px * var(--scale)) rgba(0, 0, 0, 0.6);
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family), serif;
+  font-size: calc(16px * var(--scale));
+  background: #2e1a0f;
+
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.page-center {
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(120deg, #2e1a0f 60%, #8B2E2E 100%);
+}
+
+

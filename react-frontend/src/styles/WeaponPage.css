@@ -1,0 +1,148 @@
+.page-center {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0; /* remove if added elsewhere */
+    background: linear-gradient(120deg, #2e1a0f 60%, #8B2E2E 100%);
+    box-sizing: border-box;
+    overflow: hidden; /* ensure inner content doesn’t overflow page-center */
+}
+
+
+.weapon-chooser {
+    max-width: 1140px;
+    width: 100%;
+    max-height: 90vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem 2.5rem; /* ↓ smaller padding */
+    box-sizing: border-box;
+}
+
+
+
+.western-title {
+    font-family: var(--font-family), serif;
+    color: var(--secondary-color);
+    text-align: center;
+    letter-spacing: 3px;
+    font-size: 2.4rem; /* ↓ from 3.2rem */
+    margin-bottom: 2rem; /* ↓ from 3rem */
+    text-shadow: 3px 5px 0 var(--accent-color);
+}
+
+.weapon-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* ↓ from 280px */
+    gap: 2rem; /* ↓ from 2.5rem */
+}
+
+.weapon-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--accent-color);
+    box-shadow: var(--button-shadow);
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+    border: 3px solid transparent;
+    padding: 1.25rem 1rem; /* ↓ from 2rem 1.5rem */
+    border-radius: 20px;
+}
+
+.weapon-card.selected {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 4px var(--secondary-color), var(--button-shadow);
+}
+
+.weapon-card:hover {
+    transform: scale(1.05);
+    z-index: 2;
+}
+
+.weapon-avatar {
+    background: #fff2;
+    object-fit: cover;
+    box-shadow: var(--button-shadow);
+    width: 200px; /* ↓ from 128px */
+    height: 120px;
+    margin-bottom: 1rem; /* ↓ from 1.2rem */
+}
+
+.weapon-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.weapon-name {
+    font-size: 1.4rem;
+    color: var(--secondary-color);
+    font-family: var(--font-family), serif;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 8px var(--black-color);
+}
+
+.weapon-desc {
+    font-size: 1rem;
+    color: #e5d9c5;
+    font-family: serif;
+    text-align: center;
+    margin-bottom: 0.75rem;
+    min-height: 2.5rem;
+}
+
+.weapon-stats {
+    list-style: none;
+    padding: 0.75rem;
+    font-size: 0.9rem;
+    color: #fffc;
+    font-family: monospace;
+    line-height: 1.6;
+    background: rgba(255, 255, 255, 0.07);
+    border-radius: 10px;
+    width: 100%;
+    text-align: left;
+}
+
+.button-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.western-btn {
+    font-family: var(--font-family), cursive;
+    font-size: 1.6rem;
+    padding: 1rem 3rem;
+    border-radius: 16px;
+    border: 3px solid var(--secondary-color);
+    background: linear-gradient(90deg, #a37b43 70%, #8B2E2E 100%);
+    color: #fff;
+    box-shadow: var(--button-shadow);
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s, transform 0.1s;
+    min-width: 260px;
+}
+
+.western-btn.exit {
+    background: linear-gradient(90deg, #3e1f0f 70%, #8B2E2E 100%);
+    border-color: #8B2E2E;
+}
+
+.western-btn.save:disabled {
+    background: #555;
+    color: #ddd;
+    cursor: not-allowed;
+}
+
+.western-btn:active {
+    transform: scale(0.96);
+}

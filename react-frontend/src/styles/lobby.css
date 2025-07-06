@@ -1,0 +1,219 @@
+/* ROOT */
+.lobby-root {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    font-family: var(--font-family), serif;
+    background: radial-gradient(ellipse at center, #000 0%, #1a0d07 100%);
+    color: var(--secondary-color);
+    overflow: hidden;
+}
+
+/* HUD (top right with coins etc) */
+.lobby-hud {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+    gap: 1rem;
+    background-color: var(--accent-color);
+    border: 2px solid var(--secondary-color);
+    border-radius: 12px;
+    padding: 0.75rem 1rem;
+    box-shadow: var(--button-shadow);
+    box-sizing: border-box;
+
+}
+
+
+.lobby-hud-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+}
+
+.lobby-settings-icon {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.lobby-settings-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Player profile (top left) */
+.lobby-player-profile {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--accent-color);
+    border: 2px solid var(--secondary-color);
+    padding: 0.1rem;
+    border-radius: 12px;
+    box-shadow: var(--button-shadow);
+    width: 300px;
+    height: 120px;
+    gap: 0.5rem;
+}
+
+.lobby-player-profile img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    object-fit: cover;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.lobby-player-name {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--secondary-color);
+    text-transform: uppercase;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+    letter-spacing: 0.05em;
+}
+
+
+/* Daily tasks (right middle) */
+.lobby-daily-tasks {
+    position: absolute;
+    top: 6rem;
+    right: 1.5rem;
+    width: 300px;
+    background-color: var(--accent-color);
+    border: 2px solid var(--secondary-color);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: var(--button-shadow);
+    color: var(--secondary-color);
+    box-sizing: border-box;
+
+}
+
+.lobby-daily-tasks h3 {
+    margin: 0 0 1rem 0;
+    font-size: 1.8rem;
+    color: var(--secondary-color);
+}
+
+.lobby-daily-tasks ul {
+    list-style: none;
+    font-size: 1.2rem;
+    padding: 0;
+    margin: 0;
+}
+
+.lobby-daily-tasks li {
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+/* Left middle buttons */
+.lobby-left-actions {
+    position: absolute;
+    top: 50%;
+    left: 1.5rem;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.lobby-action-btn, .lobby-exit-btn {
+    font-family: var(--font-family), serif;
+    font-size: 1.5rem;
+    background: var(--accent-color);
+    color: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
+    border-radius: var(--button-radius);
+    padding: 0.6rem 1.2rem;
+    cursor: pointer;
+    box-shadow: var(--button-shadow);
+    transition: all 0.2s ease-in-out;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.lobby-action-btn:hover, .lobby-exit-btn:hover {
+    background: var(--secondary-color);
+    color: var(--accent-color);
+}
+
+/* Bottom left map preview */
+.lobby-map-preview {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 1.5rem;
+    background-color: var(--accent-color);
+    padding: 1rem 1rem;
+    border-radius: 12px;
+    box-shadow: var(--button-shadow);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 2px solid var(--secondary-color);
+    gap: 0.5rem;
+}
+
+.lobby-map-preview img{
+    width: 150px;
+    height: 100px;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.lobbyMapTexts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.3rem;
+}
+.lobby-level-text {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+.lobby-level-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+/* Bottom center saloon bar (Start Game button) */
+.lobby-saloon-bar {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lobby-saloon-bar .lobby-action-btn {
+    font-size: 1.5rem;
+    padding: 0.8rem 2rem;
+    border-radius: 16px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+/* General enhancements */
+button {
+    outline: none;
+    border: none;
+}
+
+canvas {
+    z-index: 0;
+}
+
+

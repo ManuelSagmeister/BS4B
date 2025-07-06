@@ -1,0 +1,102 @@
+.death-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--primary-color);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: auto;
+    font-family: var(--font-family);
+}
+
+.death-card {
+    background-color: var(--accent-color); /* match your other boxes */
+    border: 4px solid var(--secondary-color);
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7), var(--button-shadow);
+    padding: 2rem 2rem;
+    text-align: center;
+    max-width: 500px;
+    animation: pop-in 0.6s ease-out;
+    color: var(--secondary-color);
+}
+
+.death-card .banner {
+    background-color: var(--primary-color);
+    color: #fff;
+    font-size: 1.8rem;
+    padding: 0.5rem 2rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    transform: rotate(-2deg);
+    display: inline-block;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.death-card .icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.death-card .death-title {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    text-shadow: 1px 2px var(--accent-color);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.death-card .death-stats {
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.death-summary {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+}
+
+.death-info {
+    font-size: 1rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.death-error {
+    font-size: 1rem;
+    color: red;
+    margin-bottom: 1rem;
+}
+
+/* Button style to match Lobby action buttons */
+.death-btn {
+    font-family: var(--font-family), serif;
+    font-size: 1.5rem;
+    background: var(--accent-color);
+    color: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
+    border-radius: 12px;
+    padding: 0.8rem 2rem;
+    cursor: pointer;
+    box-shadow: var(--button-shadow);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+}
+
+.death-btn:hover {
+    background: var(--secondary-color);
+    color: var(--accent-color);
+    transform: scale(1.05);
+}

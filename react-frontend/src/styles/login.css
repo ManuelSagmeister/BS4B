@@ -1,0 +1,105 @@
+/* Root and background */
+.login-root {
+    height: 100vh;
+    width: 100vw;
+    background: radial-gradient(ellipse at center, #000 0%, #1a0d07 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-family), serif;
+    color: var(--secondary-color);
+    padding: 1rem;
+}
+
+/* Card container */
+.login-card {
+    background: rgba(20, 10, 5, 0.85);
+    backdrop-filter: blur(8px);
+    border-radius: 24px;
+    padding: 2.5rem 3rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+    width: 320px;
+    max-width: 90vw;
+    text-align: center;
+    border: 2px solid var(--accent-color);
+}
+
+/* Title */
+.login-title {
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 2rem;
+    color: var(--secondary-color);
+    text-shadow: 0 0 12px var(--accent-color);
+    user-select: none;
+}
+
+/* Form styling */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+/* Label */
+.login-label {
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-align: left;
+    color: var(--secondary-color);
+}
+
+/* Input */
+.login-input {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1rem;
+    padding: 0.6rem 1rem;
+    border-radius: 12px;
+    border: 2px solid var(--secondary-color);
+    background-color: rgba(30, 15, 8, 0.7);
+    color: var(--secondary-color);
+    transition: border-color 0.3s ease;
+    outline: none;
+}
+
+
+
+.login-input:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 10px var(--accent-color);
+}
+
+/* Error text */
+.login-error {
+    color: #f87171; /* Tailwind’s red-400 */
+    font-size: 0.875rem;
+    margin-top: -0.75rem;
+    margin-bottom: 0.75rem;
+    text-align: left;
+}
+
+/* Button */
+.login-button {
+    font-family: var(--font-family), serif;
+    font-size: 1.3rem;
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+    padding: 0.75rem 0;
+    border: 2px solid var(--secondary-color);
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: var(--button-shadow);
+    transition: all 0.2s ease-in-out;
+    user-select: none;
+}
+
+.login-button:hover:not(:disabled) {
+    background-color: var(--secondary-color);
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+.login-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}

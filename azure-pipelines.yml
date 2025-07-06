@@ -1,0 +1,30 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+  branches:
+    include:
+    - "*"
+
+pool:
+  name: Team_8_Pool
+
+steps:
+- checkout: self
+- script: |
+    BRANCH_NAME=$(echo "$(Build.SourceBranchName)" | tr '/_' '-')
+    DEPLOY_DIR="$HOME/${BRANCH_NAME}/dev/"
+
+    echo "Removing old development build folder"
+    rm -rf "${DEPLOY_DIR}"
+
+    echo "Creating new development build folder"
+    mkdir -p "${DEPLOY_DIR}"
+
+    echo "Deploying development build"
+    # Depending on selected branch above, it will copy all its repo files onto VM
+    cp -r "$(Build.SourcesDirectory)"/* "${DEPLOY_DIR}" 
+  displayName: "Deploy branch-specific development build"
+

@@ -1,0 +1,16 @@
+.game-canvas-root {
+    position: fixed;    /* or absolute, depending on your layout */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;         /* adjust as needed, so overlays/HUDs appear above */
+    pointer-events: auto;
+}
+
+.game-canvas-root canvas {
+    width: 100vw !important;
+    height: 100vh !important;
+    display: block;
+    background: transparent;
+}
